@@ -15,7 +15,7 @@ export default function Home() {
           </Badge>
         </div>
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-          Next.js + Sanity Studio
+          Mark Landeryou's Portfolio
         </h1>
         <p className="text-lg text-muted-foreground">
           A modern full-stack monorepo with Next.js 15, TypeScript, Tailwind CSS, shadcn/ui, one-click dark/light theme toggle, and Sanity CMS backend.

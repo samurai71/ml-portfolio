@@ -8,7 +8,7 @@ import { Layers } from "lucide-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js + Sanity Monorepo",
+  title: "Mark Landeryou Sarnia Ontario",
   description: "Monorepo with Next.js, shadcn/ui, Tailwind CSS, and Sanity Studio backend",
 };
 
