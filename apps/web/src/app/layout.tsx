@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Layers } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js + Sanity Monorepo",
-  description: "Monorepo with Next.js, shadcn/ui, Tailwind CSS, and Sanity Studio backend",
+  title: "Mark Landeryou Sarnia Ontario",
+  description:
+    "Monorepo with Next.js, shadcn/ui, Tailwind CSS, and Sanity Studio backend",
 };
 
 export default function RootLayout({
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}>
+      <body
+        className={`${inter.className} bg-background text-foreground min-h-screen antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -27,10 +30,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">
-            <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
               <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-8">
                 <div className="flex items-center gap-2 font-bold tracking-tight">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                  <div className="bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center rounded-lg">
                     <Layers className="h-4 w-4" />
                   </div>
                   <span className="text-base sm:text-lg">Monorepo Starter</span>
@@ -41,7 +44,7 @@ export default function RootLayout({
                     href="http://localhost:3333"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground text-xs font-medium transition-colors sm:text-sm"
                   >
                     Open Studio ↗
                   </a>
@@ -52,9 +55,9 @@ export default function RootLayout({
 
             <main className="flex-1">{children}</main>
 
-            <footer className="border-t border-border/40 py-6 md:py-0">
-              <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row px-4 sm:px-8">
-                <p className="text-balance text-center text-xs text-muted-foreground md:text-left">
+            <footer className="border-border/40 border-t py-6 md:py-0">
+              <div className="container flex flex-col items-center justify-between gap-4 px-4 sm:px-8 md:h-16 md:flex-row">
+                <p className="text-muted-foreground text-center text-xs text-balance md:text-left">
                   Next.js + Tailwind + shadcn/ui + Sanity Studio Monorepo
                 </p>
               </div>
