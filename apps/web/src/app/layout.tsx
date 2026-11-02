@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mark Landeryou Sarnia Ontario",
+  title: "Mark Landeryou, Sarnia Ontario",
   description:
     "Monorepo with Next.js, shadcn/ui, Tailwind CSS, and Sanity Studio backend",
 };
