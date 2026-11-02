@@ -5,9 +5,14 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
-    "clean": "turbo clean"
+    "clean": "turbo clean",
+    "prepare": "lefthook install"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "lefthook": "^2.2.2",
     "turbo": "^2.4.0"
   },
   "packageManager": "pnpm@9.15.0"

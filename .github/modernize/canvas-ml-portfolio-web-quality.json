@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "language": "auto",
+  "source": "apps/web",
+  "goal": "Modernize the web workspace with Biome linting/formatting, Tailwind class and import sorting, Lefthook pre-commit checks, commitlint, and kebab-case naming enforcement.",
+  "upgradeTarget": "",
+  "planName": "modernization-plan",
+  "delegate": "local",
+  "steps": {
+    "assess": {
+      "status": "complete",
+      "updatedAt": "2026-11-02T13:12:22.146Z"
+    },
+    "plan": {
+      "status": "complete",
+      "updatedAt": "2026-11-02T13:12:25.550Z"
+    },
+    "execute": {
+      "status": "blocked",
+      "updatedAt": "2026-11-02T13:16:56.861Z"
+    }
+  },
+  "updatedAt": "2026-11-02T13:17:01.254Z"
+}

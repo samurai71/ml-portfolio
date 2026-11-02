@@ -40,25 +40,30 @@ Full-stack monorepo built with **pnpm workspaces**, **Turborepo**, **Next.js 15*
 ## Quick Start
 
 ### 1. Install Dependencies
+
 ```bash
 pnpm install
 ```
 
 ### 2. Connect Your Sanity Project
+
 Create or retrieve your Sanity project ID at [sanity.io/manage](https://www.sanity.io/manage), then update:
 - `apps/web/.env.local`:
+
   ```env
   NEXT_PUBLIC_SANITY_PROJECT_ID=your_actual_project_id
   NEXT_PUBLIC_SANITY_DATASET=production
   NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
   ```
 - `apps/studio/.env`:
+
   ```env
   SANITY_STUDIO_PROJECT_ID=your_actual_project_id
   SANITY_STUDIO_DATASET=production
   ```
 
 ### 3. Run Development Servers
+
 From the root directory:
 ```bash
 pnpm dev
@@ -68,11 +73,28 @@ pnpm dev
 - **Sanity Studio CMS**: [http://localhost:3333](http://localhost:3333)
 
 ### 4. Build for Production
+
 ```bash
 pnpm build
 ```
 
+## Web Code Quality
+
+The `apps/web` workspace uses Biome for linting, formatting, import organization,
+and Tailwind class sorting. Run these commands from the repository root:
+
+```bash
+pnpm --filter web lint
+pnpm --filter web format
+```
+
+Lefthook runs Biome on staged web files before commits and validates commit
+messages with commitlint using the Conventional Commits format (for example,
+`feat: add portfolio filters`). Web files and folders must use kebab-case;
+`README.md` and Markdown files under `.github` are exempt.
+
 ## Features Included
+
 - 🌗 **One-Click Theme Toggle**: Direct button switching between light and dark mode using `next-themes` and Lucide icons.
 - 🎨 **Tailwind CSS & shadcn/ui**: Fully customizable CSS variable tokens with accessible components (`Button`, `Card`, `Badge`).
 - ⚡ **Turborepo Caching**: Fast parallel builds and hot reloading across apps.

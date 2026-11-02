@@ -1,0 +1,26 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: biome
+      glob:
+        - "apps/web/**/*.js"
+        - "apps/web/**/*.jsx"
+        - "apps/web/**/*.ts"
+        - "apps/web/**/*.tsx"
+        - "apps/web/**/*.mjs"
+        - "apps/web/**/*.cjs"
+        - "apps/web/**/*.json"
+        - "apps/web/**/*.jsonc"
+        - "apps/web/**/*.css"
+      run: pnpm exec biome check --write --unsafe
+      args: "{staged_files}"
+      stage_fixed: true
+
+    - name: naming
+      glob: "apps/web/**/*"
+      run: pnpm --filter web check:naming
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: pnpm exec commitlint --edit {1}
