@@ -1,19 +1,22 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Inter } from 'next/font/google'
+import { Bitter, Raleway, Roboto_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { cn } from '@/lib/utils'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const bitter = Bitter({
   subsets: ['latin'],
+  variable: '--font-bitter',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const raleway = Raleway({
   subsets: ['latin'],
+  variable: '--font-raleway',
+})
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
 })
 
 export const metadata: Metadata = {
@@ -29,10 +32,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className={cn(
         'h-full',
         'antialiased',
-        geistSans.variable,
-        geistMono.variable,
+        bitter.variable,
+        raleway.variable,
+        robotoMono.variable,
         'font-sans',
-        inter.variable,
       )}
     >
       <body className="min-h-full flex flex-col">
