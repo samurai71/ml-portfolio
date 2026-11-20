@@ -6,6 +6,9 @@
     "source.organizeImports.biome": "explicit"
   },
   "cSpell.words": [
-    "neurolint"
+    "cmdk",
+    "neurolint",
+    "shiki",
+    "turbopack"
   ]
 }
