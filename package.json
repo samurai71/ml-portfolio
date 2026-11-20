@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "neurolint:analyze": "neurolint analyze . --verbose",
+    "neurolint:fix": "neurolint fix . --all-layers --verbose",
+    "neurolint:fix:dry": "neurolint fix . --all-layers --dry-run --verbose",
+    "neurolint:validate": "neurolint validate .",
+    "neurolint:security": "neurolint security:scan-compromise . --quick"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -18,6 +23,7 @@
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.76.0",
     "next": "16.4.6",
+    "next-themes": "^0.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "shadcn": "^4.23.0",
@@ -26,6 +32,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",
+    "@neurolint/cli": "^1.5.9",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
