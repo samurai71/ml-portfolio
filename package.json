@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "neurolint:analyze": "neurolint analyze . --verbose",
+    "neurolint:fix": "neurolint fix . --all-layers --verbose",
+    "neurolint:fix:dry": "neurolint fix . --all-layers --dry-run --verbose",
+    "neurolint:validate": "neurolint validate .",
+    "neurolint:security": "neurolint security:scan-compromise . --quick"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -27,6 +32,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",
+    "@neurolint/cli": "^1.5.9",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
